@@ -1,31 +1,33 @@
 ﻿using System.Collections;
 using System.Data.SqlTypes;
-using System.Security.Cryptography.X509Certificates;
 internal class Program
 {
     private static void Main(string[] args)
     {
-        Person Bob = new(15, 45.43, "Bob");
+        Person Bob = new(15, 45.43);
         Bob.GG();
-        SqlDateTime sqlDateTime = new SqlDateTime(DateTime.Now);
-        Console.WriteLine(sqlDateTime);
-        DateOnly sqlDateTime2 = new(21,10,10);
+        Console.WriteLine(Bob.ToString());
+
         Bobus amogus = new Bobus(10, 25, "Amogus");
+
         Bobus.KaefStruct booba = new();
         var name = booba.name = "Nigga";
         var id = booba.id = 1;
         Console.WriteLine($"Его имя = {name},его id = {id}");
 
-        Console.WriteLine(Bob.ToString());
+        SqlDateTime sqlDateTime = new SqlDateTime(DateTime.Now);
+        Console.WriteLine(sqlDateTime);
 
+        DateOnly sqlDateTime2 = new(21, 10, 10);
         int[] masGG =[1, 2, 3, 4];
         masGG = [1,2,3,4,5,6];
         for (int i = 0; i < masGG.Length; i++)
         {
             Console.Write(masGG[i]);
         }
+        Console.WriteLine();
 
-
+        Console.WriteLine(amogus.ToString());
     }
     
 }
@@ -34,6 +36,13 @@ public class Person
     private int _age;
     private double _veight;
     private string _name;
+
+
+    public Person(int age,double veight):this (age,veight,"Undefied")
+    {
+
+    }
+
     public Person(int age, double veight, string name)
     {
         _age = age;
@@ -67,5 +76,6 @@ public class Bobus : Person
             this.id = id;
             this.name = name;
         }
+        public KaefStruct(int id) : this(id,"Name") { }
     }
 }
