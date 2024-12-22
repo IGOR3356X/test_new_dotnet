@@ -1,33 +1,45 @@
-﻿using System.Collections;
+﻿using ConsoleApp1;
+using ConsoleApp1.Generic;
+using System.Collections;
 using System.Data.SqlTypes;
 internal class Program
 {
     private static void Main(string[] args)
     {
-        Person Bob = new(15, 45.43);
-        Bob.GG();
-        Console.WriteLine(Bob.ToString());
+        //Object ob = "ggdgg";
+        #region Тестим всякое говно
 
-        Bobus amogus = new Bobus(10, 25, "Amogus");
+        //Person Bob = new(15, 45.43);
+        //Bob.GG();
+        //Console.WriteLine(Bob.ToString());
 
-        Bobus.KaefStruct booba = new();
-        var name = booba.name = "Nigga";
-        var id = booba.id = 1;
-        Console.WriteLine($"Его имя = {name},его id = {id}");
+        //Bobus amogus = new Bobus(10, 25, "Amogus");
 
-        SqlDateTime sqlDateTime = new SqlDateTime(DateTime.Now);
-        Console.WriteLine(sqlDateTime);
+        //Bobus.KaefStruct booba = new();
+        //var name = booba.name = "Nigga";
+        //var id = booba.id = 1;
+        //Console.WriteLine($"Его имя = {name},его id = {id}");
 
-        DateOnly sqlDateTime2 = new(21, 10, 10);
-        int[] masGG =[1, 2, 3, 4];
-        masGG = [1,2,3,4,5,6];
-        for (int i = 0; i < masGG.Length; i++)
-        {
-            Console.Write(masGG[i]);
-        }
-        Console.WriteLine();
+        //SqlDateTime sqlDateTime = new SqlDateTime(DateTime.Now);
+        //Console.WriteLine(sqlDateTime);
 
-        Console.WriteLine(amogus.ToString());
+        //DateOnly sqlDateTime2 = new(21, 10, 10);
+        //int[] masGG =[1, 2, 3, 4];
+        //masGG = [1,2,3,4,5,6];
+        //for (int i = 0; i < masGG.Length; i++)
+        //{
+        //    Console.Write(masGG[i]);
+        //}
+        //Console.WriteLine();
+
+        //Console.WriteLine(amogus.ToString());
+        #endregion
+        //GenericOutput.ConsolePisat();
+        //Cat cat = new("GAY");
+        //Console.WriteLine(cat.Name);
+        Person person = new(1, 1.2);
+        Console.WriteLine(person.ToString());
+        
     }
     
 }
@@ -36,7 +48,6 @@ public class Person
     private int _age;
     private double _veight;
     private string _name;
-
 
     public Person(int age,double veight):this (age,veight,"Undefied")
     {
