@@ -1,12 +1,32 @@
-﻿using ConsoleApp1;
+﻿using System.Runtime.InteropServices.JavaScript;
+using System.Text;
 using ConsoleApp1.Generic;
-using System.Collections;
-using System.Data.SqlTypes;
+
+namespace ConsoleApp1;
+
 internal class Program
 {
     private static void Main(string[] args)
     {
+        //using var input = new StreamReader(Console.OpenStandardInput());
+        //using var output = new StreamWriter(Console.OpenStandardOutput());
+        //StringBuilder sb = new StringBuilder();
+
+        //var s = input.ReadLine();
+        //for (int i = 0; i < int.Parse(s); i++)
+        //{
+        //    var answer = input.ReadLine();
+        //    for (int j = 0; j < answer.Length; j++)
+        //    {
+
+        //    }
+        //    sb.Append(answer + "\n");
+        //}
+
+        //Console.WriteLine(sb);
+
         //Object ob = "ggdgg";
+
         #region Тестим всякое говно
 
         //Person Bob = new(15, 45.43);
@@ -33,60 +53,42 @@ internal class Program
         //Console.WriteLine();
 
         //Console.WriteLine(amogus.ToString());
+
         #endregion
+
         //GenericOutput.ConsolePisat();
         //Cat cat = new("GAY");
         //Console.WriteLine(cat.Name);
-        Person person = new(1, 1.2);
-        Console.WriteLine(person.ToString());
-        
+        //Person person = new(1, 1.2);
+        //Console.WriteLine(person.ToString());
+        //int[] mas = {1,2,3,4,5};
+        //int[,] matrix = new int[2, 5];
+
+        //for (int i = 0; i < mas.Length; i++)
+        //{
+        //    Console.Write(mas[i] + " ");
+        //}
+        //Console.WriteLine();
+        //string gg = "dgdgdffb";
+        //string[] input = Console.ReadLine().Split(' ');
+        //Console.WriteLine(input);
+        //for (int i = 0; i < matrix.GetLength(0); i++)
+        //{
+        //    for (int j = 0; j < matrix.GetLength(1); j++)
+        //    {
+        //        Console.Write(matrix[i, j]);
+        //    }
+        //    Console.WriteLine();
+        //}
+    }
+
+}
+    
+public interface ILogger
+{
+    public void Info(string message)
+    {
+        Console.WriteLine(message);
     }
     
-}
-public class Person
-{
-    private int _age;
-    private double _veight;
-    private string _name;
-
-    public Person(int age,double veight):this (age,veight,"Undefied")
-    {
-
-    }
-
-    public Person(int age, double veight, string name)
-    {
-        _age = age;
-        _veight = veight;
-        _name = name;
-        
-    }
-    public override string ToString()
-    {
-        return $"name = {_name}, вес = {_veight} , возраст = {_age}";
-    }
-    public void GG()
-    {
-        Console.WriteLine();
-    }
-}
-
-public class Bobus : Person
-{
-    public Bobus(int age, double veight, string name) : base(age, veight, name)
-    {
-
-    }
-    public struct KaefStruct
-    {
-        public int id { get; set; }
-        public string name;
-
-        public KaefStruct(int id, string name)
-        {
-            this.id = id;
-            this.name = name;
-        }
-        public KaefStruct(int id) : this(id,"Name") { }
-    }
 }
